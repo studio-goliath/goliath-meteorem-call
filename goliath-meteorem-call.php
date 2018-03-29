@@ -171,6 +171,7 @@ class Meteorem_Call {
 
             // Variables disponibles : CODE,WEATHER,WINDIR,WINDKMH,WINDBFT,GUST,GALE,PRMSL,TEMP,TMPRSTI,RHM,EPHEM,SAINT (attention : certaines provoquent une erreur)
             $variables = array(
+                'CODE'      => '',
                 'WINDKMH'   => '',
                 'TEMP'      => '',
                 'WEATHER'   => '',
@@ -211,6 +212,7 @@ class Meteorem_Call {
                     $result['wind'] = $variables['WINDKMH'];
                     $result['temp'] = $variables['TEMP'];
                     $result['weather'] = $variables['WEATHER'];
+                    $result['code'] = $variables['CODE'];
 
                     if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
                         $result['log'] = json_encode( $meteo );

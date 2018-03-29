@@ -24,7 +24,7 @@ class MeteoremSettings {
             array( $this, 'create_admin_page' )
         );
     }
-    
+
     public function create_admin_page() {
         $this->options = get_option( 'meteorem_option' );
         ?>
